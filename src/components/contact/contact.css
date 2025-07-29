@@ -1,19 +1,21 @@
 .contact {
     margin: 80px auto;
-    max-width: 90%;
+    max-width: 1200px; /* better layout control */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* prevent wrapping on large screens */
     align-items: flex-start;
     justify-content: space-between;
     gap: 40px;
 }
 
 .contact-col {
-    flex: 1 1 48%;
+    flex: 1 1 50%;
     color: #676767;
-    min-width: 280px;
+    min-width: 300px;
+    box-sizing: border-box;
 }
 
+/* Headings */
 .contact-col h3 {
     color: #000F38;
     font-weight: 500;
@@ -28,6 +30,7 @@
     margin-left: 10px;
 }
 
+/* Paragraph and lists */
 .contact-col p {
     max-width: 450px;
     line-height: 1.6;
@@ -44,6 +47,7 @@
     margin-right: 10px;
 }
 
+/* Form inputs */
 .contact form input,
 .contact form textarea {
     display: block;
@@ -59,6 +63,7 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* Button */
 button {
     background: #2a2fae;
     color: white;
@@ -83,17 +88,17 @@ button:hover {
     margin: 20px 0;
 }
 
-/* ✅ Mobile-friendly layout */
+/* Stack layout on very small screens */
 @media (max-width: 768px) {
     .contact {
         flex-direction: column;
         align-items: center;
         padding: 0 10px;
+        flex-wrap: wrap;
     }
 
     .contact-col {
         width: 100%;
-        flex-basis: 100%;
         text-align: center;
     }
 
@@ -107,10 +112,6 @@ button:hover {
 
     .contact-col ul li {
         justify-content: center;
-    }
-
-    .contact-col ul li img {
-        margin-right: 10px;
     }
 
     .contact form {

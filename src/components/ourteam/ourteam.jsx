@@ -1,9 +1,9 @@
 import React from 'react';
-import './ourteam.css'
+import './ourteam.css';
 import team1 from '../../assets/user-1.png';
 import team2 from '../../assets/user-2.png';
 import team3 from '../../assets/user-3.png';
-import { FaUserTie, FaPencilRuler, FaCode, FaEnvelope } from 'react-icons/fa'; // Added envelope for contact
+import { FaUserTie, FaEnvelope } from 'react-icons/fa';
 
 const teamMembers = [
   {
@@ -14,13 +14,13 @@ const teamMembers = [
   },
   {
     name: 'Person2',
-    role: 'General manager',
+    role: 'General Manager',
     img: team2,
     contact: 'person2@example.com',
   },
   {
-    name: 'person3',
-    role: 'Project manger',
+    name: 'Person3',
+    role: 'Project Manager',
     img: team3,
     contact: 'person3@example.com',
   },
@@ -28,24 +28,21 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="team-section">
-      <h2 className="team-title">Meet the Team</h2>
+    <section className="team-section">
+      <h2 className="team-title">Meet Our Team</h2>
       <div className="team-container">
         {teamMembers.map((member, index) => (
-          <div className="team-member" key={index}>
+          <div className="team-card" key={index}>
             <img src={member.img} alt={member.name} className="team-image" />
             <h3 className="team-name">{member.name}</h3>
-            <p className="team-role">
-              <FaUserTie className="icon" /> {member.role}
-            </p>
+            <p className="team-role"><FaUserTie /> {member.role}</p>
             <p className="team-contact">
-              <FaEnvelope className="icon" />{' '}
-              <a href={`mailto:${member.contact}`}>{member.contact}</a>
+              <FaEnvelope /> <a href={`mailto:${member.contact}`}>{member.contact}</a>
             </p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

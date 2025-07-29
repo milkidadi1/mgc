@@ -30,45 +30,40 @@ const About = () => {
       <h2 className="about-main-title">About Us</h2>
 
       <div className="about-horizontal">
-        <div className="about-card">
-          <FaBuilding className="about-icon" />
-          <div>
-            <h3 className="about-heading">Company Background</h3>
-            <p className="about-paragraph">
-              Mada Walabu General Construction PLC (MWGC) is a Grade Three (GC-3) contractor recognized by the Federal Construction Authority and Grade Four (GC-4) by the Oromia Construction Authority. Originally established in 2004 E.C. as Mada Welabu Construction Enterprise, it was rebranded in 2010 E.C.
-            </p>
+        {[
+          {
+            icon: <FaBuilding className="about-icon" />,
+            title: 'Company Background',
+            text:
+              'Mada Walabu General Construction PLC is a Grade Three (GC-3) contractor certified by the Federal Construction Authority and Grade Four (GC-4) in Oromia. Originally founded in 2004 E.C. as Mada Welabu Construction Enterprise, it evolved to its current form in 2010 E.C.',
+          },
+          {
+            icon: <FaHardHat className="about-icon" />,
+            title: 'Professional Expertise',
+            text:
+              'Over a decade of expertise has made MWGC a competitive force in Ethiopia’s construction sector. We specialize in delivering high-quality infrastructure through highly technical and disciplined professionals.',
+          },
+          {
+            icon: <FaCogs className="about-icon" />,
+            title: 'Principles',
+            text:
+              'Our work is guided by principles of integrity, client satisfaction, and efficient resource utilization. We leverage modern technologies to exceed expectations and deliver consistent results.',
+          },
+          {
+            icon: <FaHandsHelping className="about-icon" />,
+            title: 'Community Commitment',
+            text:
+              'We invest in community development and youth employment. Corporate social responsibility is embedded in our values, aiming for long-term positive impact.',
+          },
+        ].map((item, index) => (
+          <div className="about-card" key={index}>
+            {item.icon}
+            <div>
+              <h3 className="about-heading">{item.title}</h3>
+              <p className="about-paragraph">{item.text}</p>
+            </div>
           </div>
-        </div>
-
-        <div className="about-card">
-          <FaHardHat className="about-icon" />
-          <div>
-            <h3 className="about-heading">Professional Expertise</h3>
-            <p className="about-paragraph">
-              With over a decade of experience, MWGC has emerged as a competitive and trusted firm in Ethiopia's construction sector. We specialize in delivering complex, high-quality infrastructure with a team of highly technical and disciplined professionals.
-            </p>
-          </div>
-        </div>
-
-        <div className="about-card">
-          <FaCogs className="about-icon" />
-          <div>
-            <h3 className="about-heading">Principles</h3>
-            <p className="about-paragraph">
-              We are driven by a mission to become one of the country’s leading construction firms—leveraging cost-effective and modern technologies to exceed our clients’ expectations. At the core of our operations are our core principles: client satisfaction, trusted human capital, and efficient resource deployment.
-            </p>
-          </div>
-        </div>
-
-        <div className="about-card">
-          <FaHandsHelping className="about-icon" />
-          <div>
-            <h3 className="about-heading">Community Commitment</h3>
-            <p className="about-paragraph">
-              Beyond business, we are committed to positively impacting the communities we serve. MWGC invests in local development and empowers youth through employment and training programs aligned with our corporate social responsibility values.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="company-status" ref={ref}>
@@ -76,25 +71,17 @@ const About = () => {
         <div className="status-cards">
           <div className="status-item">
             <FaUserTie className="status-icon" />
-            <p className="status-value">
-              {startCount && <CountUp end={20} duration={2} />}+
-            </p>
+            <p className="status-value">{startCount && <CountUp end={20} duration={2} />}+</p>
             <p className="status-label">Employees</p>
           </div>
-
           <div className="status-item">
             <FaProjectDiagram className="status-icon" />
-            <p className="status-value">
-              {startCount && <CountUp end={30} duration={2} />}+
-            </p>
+            <p className="status-value">{startCount && <CountUp end={30} duration={2} />}+</p>
             <p className="status-label">Completed Projects</p>
           </div>
-
           <div className="status-item">
             <FaAward className="status-icon" />
-            <p className="status-value">
-              {startCount && <CountUp end={12} duration={2} />}
-            </p>
+            <p className="status-value">{startCount && <CountUp end={12} duration={2} />}</p>
             <p className="status-label">Years of Experience</p>
           </div>
         </div>
@@ -111,10 +98,9 @@ const About = () => {
           <div className="trusted-vertical-line"></div>
           <div className="trusted-scroll-container">
             <div className="trusted-logos">
-              <img src={Shagar} alt="Shagar" />
-              <img src={Sidama} alt="Sidama" />
-              <img src={MT} alt="Ministry of Transport" />
-              <img src={ORT} alt="Roads and Transport" />
+              {[Shagar, Sidama, MT, ORT].map((img, idx) => (
+                <img key={idx} src={img} alt={`partner-${idx}`} />
+              ))}
             </div>
           </div>
         </div>
@@ -127,29 +113,27 @@ const About = () => {
             <FaHardHat className="mvv-icon" />
             <h3>Our Mission</h3>
             <p>
-              To build long-term relationships with our clients through integrity,
-              performance, and value, while consistently delivering high-quality
-              construction solutions that exceed expectations.
+              To build lasting relationships with our clients by delivering high-quality,
+              cost-effective solutions through integrity, performance, and value.
             </p>
           </div>
           <div className="mvv-card">
             <FaDraftingCompass className="mvv-icon" />
             <h3>Our Vision</h3>
             <p>
-              To be a recognized and respected leader in Ethiopia’s construction
-              industry and the preferred choice for public and private sector clients.
+              To become a nationally recognized and trusted construction partner for both
+              public and private clients, known for excellence and innovation.
             </p>
           </div>
           <div className="mvv-card">
             <FaTools className="mvv-icon" />
             <h3>Our Core Values</h3>
             <ul>
-              <li><strong>Customer First:</strong> We prioritize client needs.</li>
-              <li><strong>Accountable:</strong> We deliver on our promises.</li>
-              <li><strong>Operational Excellence:</strong> We ensure quality and speed.</li>
+              <li><strong>Customer First:</strong> We prioritize our clients.</li>
+              <li><strong>Accountability:</strong> We honor our commitments.</li>
+              <li><strong>Operational Excellence:</strong> We deliver with quality and speed.</li>
               <li><strong>Skilled Teams:</strong> We train and trust our people.</li>
-              <li><strong>Growth Culture:</strong> We support team development.</li>
-
+              <li><strong>Growth Culture:</strong> We invest in future leaders.</li>
             </ul>
           </div>
         </div>

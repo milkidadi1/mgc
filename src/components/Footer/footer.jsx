@@ -1,16 +1,27 @@
-import React from 'react'
-import  './footer.css'
+import React from 'react';
+import './Footer.css';
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 
-const footer = () => {
+const Footer = () => {
   return (
-    <div className='footer'>
-     <p>© 2025 Mada walabu Construction PLC. All rights reserved.</p>
-       <ul>
-            <li><a href="https://www.facebook.com/madawalabuconstruction" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://www.linkedin.com/company/mada-walabu-construction-plc" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-       </ul>
-    </div>
-  )
-}
+    <footer className='footer'>
+      <div className="footer-container">
+        <p>© 2025 Mada Walabu Construction PLC. All rights reserved.</p>
+        <ul className="social-links">
+          <li>
+            <a href="https://www.facebook.com/madawalabuconstruction" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/mada-walabu-construction-plc" target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  );
+};
 
-export default footer
+export default Footer;

@@ -7,7 +7,7 @@ import About from './components/About/About'
 import OurServices from './components/ourservices/ourservices'
 import OurTeam from './components/ourteam/ourteam'
 import Contact from './components/contact/contact'
-import Footer from  './components/Footer/footer'
+import Footer from './components/Footer/footer'
 
 const App = () => {
   return (
@@ -20,10 +20,10 @@ const App = () => {
          <About/>
          <OurTeam/>
          <OurServices/>
-        <Title subTitle='Get in touch' title='Contact Us'/>
-        <Contact />
-        <Footer />
+         <Title subTitle='Get in touch' title='Contact Us'/>
+         <Contact />
       </div>
+      <Footer /> {/* This is now outside of the container */}
     </div>
   )
 }
