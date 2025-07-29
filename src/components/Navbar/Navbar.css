@@ -90,6 +90,6 @@ nav ul li {
     }
 
     body:not(.dark-nav) nav ul {
-        background: transparent; /* transparent menu on homepage */
+        background: #e0e0e0; /* transparent menu on homepage */
     }
 }
