@@ -1,0 +1,261 @@
+.about-main-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.about-section {
+  padding: 80px 20px;
+}
+
+.about-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  flex: 1 1 300px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-icon {
+  font-size: 36px;
+  color: #4338ca;
+  flex-shrink: 0;
+}
+
+.about-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.about-paragraph {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-horizontal {
+    flex-direction: column;
+  }
+}
+
+.company-status {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.status-title {
+  font-size: 32px; /* increased from 28px */
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 40px; /* slightly increased */
+}
+
+.status-cards {
+  display: flex;
+  gap: 40px; /* increased gap between cards */
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.status-item {
+  background: white;
+  padding: 60px 80px; /* increased padding */
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06); /* slightly stronger shadow */
+  text-align: center;
+  width: 260px; /* increased from 200px */
+  transition: transform 0.3s ease;
+}
+
+.status-item:hover {
+  transform: translateY(-8px); /* slightly stronger lift */
+}
+
+.status-icon {
+  font-size: 48px; /* increased from 32px */
+  color: #4338ca;
+  margin-bottom: 16px;
+}
+
+.status-value {
+  font-size: 32px; /* increased from 24px */
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.status-label {
+  font-size: 18px; 
+  color: #64748b;
+}
+.trusted-section {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: transparent;
+  overflow-x: auto;
+}
+
+.trusted-bar-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+  width: max-content;
+}
+
+.trusted-partner-text {
+  white-space: nowrap;
+  font-size: 20px;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.4;
+  font-family: 'Inter', sans-serif;
+  padding-left: 10px;
+}
+
+.trusted-partner-text strong {
+  font-size: 24px;
+  color: #1d4ed8;
+}
+
+.trusted-vertical-line {
+  width: 2px;
+  height: 80px;
+  background-color: #d1d5db;
+}
+
+.trusted-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.trusted-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.trusted-logos {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: max-content;
+}
+
+.trusted-logos img {
+  height: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.trusted-logos img:hover {
+  transform: scale(1.05);
+}
+/* WHO WE ARE Section Styles */
+
+.mvv-section {
+  padding: 80px 20px;
+  background-color: #f3f4f6; /* Light grayish background */
+  text-align: center;
+}
+
+.mvv-title {
+  font-size: 36px;
+  color: #0f172a;
+  margin-bottom: 50px;
+  font-weight: 800;
+}
+
+.mvv-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allow wrap on small screens */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.mvv-card {
+  background: #ffffff;
+  border: 1px solid #cce0ff;
+  box-shadow: 0 8px 24px rgba(0, 89, 178, 0.15);
+  border-radius: 24px;
+  padding: 30px;
+  flex: 1; /* evenly stretch */
+  min-width: 280px;
+  max-width: 100%;
+  min-height: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.mvv-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 89, 178, 0.25);
+}
+
+.mvv-icon {
+  font-size: 48px;
+  color: #0059b2;
+  margin-bottom: 20px;
+}
+
+.mvv-card h3 {
+  font-size: 24px;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.mvv-card p,
+.mvv-card ul {
+  font-size: 16px;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+.mvv-card ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+@media (max-width: 1024px) {
+  .mvv-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mvv-card {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+

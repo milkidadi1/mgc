@@ -1,0 +1,119 @@
+.projects-wrapper {
+  position: relative;
+  padding: 40px 0;
+  background: none;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card-scroll-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  flex: 1;
+}
+
+.card-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  width: max-content;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 300px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(245, 245, 245, 0.75);
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Carousel Arrow Styles */
+.carousel-arrow {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.carousel-arrow svg {
+  width: 20px;
+  height: 20px;
+  stroke: #1f2937;
+}
+
+.carousel-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
